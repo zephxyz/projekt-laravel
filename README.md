@@ -1,66 +1,34 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Písemná část
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Popis funkce MVC architektury
 
-## About Laravel
+Architektura MVC (Model, View, Controller) se často používá při vývoji webových aplikací. Tato architektura rozděluje aplikaci do tří základních částí: Modelu, View a Controlleru. Pomocí tohoto oddělení získáváme mnoho výhod, jako je zvýšená modularita, jednodušší testování a údržba kódu. MVC také umožňuje paralelní vývoj různých částí aplikace, protože každá část má jasně definovanou roli a odpovědnost.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Model: Model reprezentuje datovou stránku aplikace. Obsahuje logiku pro práci s daty, jako jsou operace čtení, zápis a aktualizace. To zahrnuje práci s databází, soubory nebo externími službami. Modely jsou obvykle implementovány jako třídy nebo objekty, které reprezentují jednotlivé entity nebo koncepty v aplikaci.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+View (Pohled): Pohled zajišťuje vizuální prezentaci dat uživateli. Tato část je zodpovědná za zobrazování informací uživateli v požadovaném formátu. Pohledy obvykle obsahují HTML, CSS a někdy i JavaScript pro interaktivitu. Mohou být dynamicky generovány na základě dat poskytnutých modelem.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Controller: Controller slouží jako prostředník mezi modelem a pohledem. Zpracovává uživatelské vstupy, provádí odpovídající operace na modelu a aktualizuje pohledy v souladu s těmito změnami. Controllery obvykle obsahují metody, které reagují na HTTP požadavky a rozhodují, jaká data budou zobrazena a jaké akce budou vykonány.
 
-## Learning Laravel
+## Výhody a nevýhody použití frameworku
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Použití Frameworku:
+#### Výhody:
+Rychlost vývoje: Frameworky poskytují mnoho hotových funkcí a knihoven, což zrychluje vývoj aplikace.
+Modularita a rozšiřitelnost: Frameworky jsou obvykle navrženy tak, aby byly modulární a rozšiřitelné, což usnadňuje integraci dalších funkcí a knihoven.
+Dobrá dokumentace a komunita: Většina frameworků má dobrou dokumentaci a živou komunitu vývojářů, což usnadňuje získání podpory a znalostí.
+Bezpečnost: Mnoho frameworků obsahuje zabudované funkce pro zabezpečení aplikace, což snižuje riziko bezpečnostních problémů.
+Abstrakce komplexity: Frameworky poskytují abstrakce pro mnoho běžných úloh, jako je routování, správa relací nebo validace dat, což usnadňuje vývoj a udržování kódu.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Nevýhody:
+Naučení se frameworku: Použití frameworku vyžaduje čas na seznámení se s jeho koncepty a konvencemi.
+Závislost na frameworku: Použití frameworku může váš kód zavázat k určité architektuře a konvencím, což může omezit flexibilitu a možnosti dalšího vývoje.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Použití čistého PHP:
+#### Výhody:
+Flexibilita: Použití čistého PHP umožňuje plnou kontrolu nad kódem a architekturou aplikace.
+Minimalizace nadbytečnosti: Použití čistého PHP umožňuje psát pouze ten kód, který je potřeba, což může vést k menší složitosti a snížení nákladů na údržbu.
+#### Nevýhody:
+Zvýšená složitost: Psaní aplikací v čistém PHP může být časově náročné a může vést k většímu množství kódu, zejména pokud je potřeba implementovat složitější funkce.
+Chybějící standardy: Použití čistého PHP může vést k nedostatku standardů a konvencí, což může ztížit spolupráci a údržbu kódu.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
